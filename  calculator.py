@@ -22,3 +22,4 @@ elif operation == ':' :
     print(f" результат деления: {result}")
 else: 
     print("неверная операция")
+    print("Shikimo")
