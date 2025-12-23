@@ -21,4 +21,4 @@ elif operation == ':' :
     result = a / b
     print(f" результат деления: {result}")
 else: 
-    print("неверная операция")1111
+    print("неверная операция")
