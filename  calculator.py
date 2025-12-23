@@ -3,25 +3,25 @@ print("калькулятор")
 operation = input("выберите операцию(+ для сложения; - для вычитания; x для умножения; : для деления;  для возведения в степень:")
 
 if operation == '+':
-    a = float(input("Первое число"))  # float - дробные числа 
+    a = float(input("Первое число"))  
     b = float(input("Второе число"))
     result = a + b
     print(f"сумма  сложения: {result:g}")
 
-elif operation == '-' : # elif - доп условия
-    a = float(input("Первое число"))  # float - дробные числа 
+elif operation == '-' : 
+    a = float(input("Первое число")) 
     b = float(input("Второе число"))
     result = a - b
     print(f"результат вычитания: {result:g}")
 
 elif operation == '*' :
-    a = float(input("Первое число"))  # float - дробные числа 
+    a = float(input("Первое число"))  
     b = float(input("Второе число"))
     result = a * b
     print(f" результат умножения: {result:g}")
 
 elif operation == ':' :
-    a = float(input("Первое число"))  # float - дробные числа 
+    a = float(input("Первое число"))  
     b = float(input("Второе число"))
     result = a / b
     if b != 0:
@@ -30,7 +30,7 @@ elif operation == ':' :
      print("Ошибка")
 
 elif operation == '' :
-    a = float(input("число возмодимое в степень"))  # float - дробные числа 
+    a = float(input("число возмодимое в степень"))  
     b = float(input("степень"))
     result = a ** b
     print(f"результат возведения в степень: {result:g}")
