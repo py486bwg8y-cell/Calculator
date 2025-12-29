@@ -1,3 +1,4 @@
+
 from tkinter import *
 
 current_expression = ""
@@ -18,7 +19,7 @@ def clear():
 def calculate():
     global current_expression, input_field
     
-    print("калькулятор")  
+    print("калькулятор") 
     
     operation = current_expression.strip() 
     
@@ -38,10 +39,9 @@ def calculate():
         input_field.delete(0, END)
         input_field.insert(0, "Введите 2 числа через : (5:3)")
         
-    elif operation == '^':  
+    elif operation == '^': 
         input_field.delete(0, END)
         input_field.insert(0, "Введите 2 числа через ^ (2^3)")
-        
     
     elif '+' in operation:
         try:
@@ -121,16 +121,15 @@ def calculate():
         input_field.delete(0, END)
         input_field.insert(0, "неверная операция")
 
-# Интерфейс
+
 root = Tk()
-root.title("Ваш Консольный Калькулятор")
+root.title("Калькулятор")
 root.geometry("500x700")
 root.configure(bg='lightgray')
 
-# Поле ввода
+
 input_field = Entry(root, font=('Arial', 16), width=20, justify=RIGHT)
 input_field.grid(row=0, column=0, columnspan=4, padx=20, pady=20)
-
 
 buttons = [
     ('7', 1, 0), ('8', 1, 1), ('9', 1, 2), ('/', 1, 3),
@@ -143,11 +142,11 @@ for (text, row, col) in buttons:
     Button(root, text=text, padx=30, pady=30, font=('Arial', 14),
            command=lambda t=text: click_button(t)).grid(row=row, column=col, padx=5, pady=5)
 
-Button(root, text="^", padx=30, pady=30, font=('Arial', 14),
+Button(root, text="^", padx=60, pady=30, font=('Arial', 14),
        command=lambda: click_button('^')).grid(row=5, column=0, columnspan=2)
-Button(root, text="C", padx=30, pady=30, font=('Arial', 14),
+Button(root, text="C", padx=60, pady=30, font=('Arial', 14),
        command=clear).grid(row=5, column=2, columnspan=2)
-Button(root, text="=", padx=30, pady=30, font=('Arial', 16), bg="lightblue",
+Button(root, text="=", padx=120, pady=40, font=('Arial', 16), bg="lightblue",
        command=calculate).grid(row=6, column=0, columnspan=4, pady=20)
 
 root.mainloop()
